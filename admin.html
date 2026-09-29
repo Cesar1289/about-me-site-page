@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Admin dashboard for Cesar Espitia's website" />
+  <meta name="robots" content="noindex" />
+  <title>Admin Dashboard | Cesar Espitia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-bar">
+      <a href="index.html" class="brand">Cesar<span>Espitia</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="future.html">Future</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="travel.html">Travel</a></li>
+          <li><a href="admin.html" class="active" aria-current="page">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Admin Dashboard</h1>
+        <p>
+          Manage and analyze contact form submissions. Sign in with the admin
+          password to continue.
+        </p>
+      </div>
+    </section>
+
+    <!-- Login view -->
+    <section id="login-view" class="section">
+      <div class="container">
+        <div class="login-card">
+          <h2>Admin Sign In</h2>
+          <p class="hint">
+            Enter the admin password to access the dashboard. The password is
+            verified on the server and is never stored in your browser.
+          </p>
+          <form id="login-form">
+            <div class="form-field" style="margin-bottom: 1.1rem;">
+              <label for="admin-password">Admin Password <span class="req">*</span></label>
+              <input type="password" id="admin-password" name="password" autocomplete="current-password" required />
+            </div>
+            <button type="submit" id="login-btn" class="btn-submit">Sign In</button>
+          </form>
+          <div id="login-message" class="form-message" role="alert"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard view (hidden until signed in) -->
+    <section id="dashboard-view" class="section hidden">
+      <div class="container">
+
+        <div class="admin-toolbar">
+          <h2 class="section-title" style="margin-bottom: 0;">Contact Messages</h2>
+          <div>
+            <button id="refresh-btn" class="btn-small btn-ghost" type="button">🔄 Refresh</button>
+            <button id="logout-btn" class="btn-small btn-ghost" type="button">Log Out</button>
+          </div>
+        </div>
+
+        <!-- Summary values (calculated from stored data) -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-total">0</div>
+            <div class="stat-label">Total Messages</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-new">0</div>
+            <div class="stat-label">New Messages</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-replied">0</div>
+            <div class="stat-label">Replied Messages</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-rate">0%</div>
+            <div class="stat-label">Reply Rate</div>
+          </div>
+        </div>
+
+        <!-- Chart: Messages by Reason for Contact -->
+        <div class="chart-card">
+          <h3>📊 Messages by Reason for Contact</h3>
+          <div id="reason-chart"></div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filter-bar" role="group" aria-label="Message filters">
+          <button class="filter-btn active" data-filter="all" type="button">All</button>
+          <button class="filter-btn" data-filter="new" type="button">New</button>
+          <button class="filter-btn" data-filter="replied" type="button">Replied</button>
+        </div>
+
+        <div id="loading-bar" class="empty-state hidden">Loading messages...</div>
+
+        <!-- Message list (newest first) -->
+        <div id="message-list" class="message-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span>2026</span> Cesar Espitia. All rights reserved.</p>
+    <p class="footer-links">
+      <a href="index.html">Home</a> ·
+      <a href="media.html">Media</a> ·
+      <a href="future.html">Future</a> ·
+      <a href="hobbies.html">Hobbies</a> ·
+      <a href="travel.html">Travel</a> ·
+      <a href="admin.html">Admin</a>
+    </p>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>

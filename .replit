@@ -1,0 +1,6 @@
+run = "node server.js"
+entrypoint = "server.js"
+modules = ["nodejs-20"]
+
+[nix]
+detected = false

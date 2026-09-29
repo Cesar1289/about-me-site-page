@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Home page of Cesar Espitia - About Me website" />
+  <title>Home | Cesar Espitia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-bar">
+      <a href="index.html" class="brand">Cesar<span>Espitia</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="future.html">Future</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="travel.html">Travel</a></li>
+          <li><a href="admin.html">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero: photo above the fold -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-photo">
+          <img src="assets/images/profile.svg" alt="Portrait photo of Cesar Espitia" width="320" height="320" />
+        </div>
+        <div class="hero-content">
+          <h1>Cesar Espitia</h1>
+          <p class="tagline">Business Student · Future Entrepreneur</p>
+          <p class="intro">
+            Welcome to my personal website! I am a business student who loves
+            connecting ideas, people, and opportunities. Explore my pages to
+            learn about my media, my hobbies, my travel, and where I am headed.
+          </p>
+          <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Biography: exactly 3 paragraphs -->
+    <section class="section" id="bio">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="bio-text">
+          <p>
+            My name is Cesar Espitia, and I am currently studying business with
+            a focus on how companies grow, market themselves, and serve their
+            customers. I became interested in business because I love seeing how
+            a good idea, a clear plan, and hard work can turn into something real
+            that helps people every day.
+          </p>
+          <p>
+            Outside of my studies, I enjoy staying active and creative. Whether I
+            am exploring the outdoors, gaming with friends, cooking a new recipe,
+            or planning my next trip, I try to approach everything with curiosity
+            and a positive attitude. I believe learning never stops, and every
+            experience teaches me something I can use later.
+          </p>
+          <p>
+            My long-term goal is to build a career in business and eventually run
+            a company of my own. This website is a small window into who I am
+            today and who I am working to become. Feel free to explore my pages,
+            check out my media, and send me a message through the contact form
+            below.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media highlights: at least two images -->
+    <section class="section" id="highlights">
+      <div class="container">
+        <h2 class="section-title">A Quick Look at My World</h2>
+        <div class="grid-2">
+          <a class="gallery-item" href="assets/images/business-me.svg" target="_blank" rel="noopener">
+            <div class="media-frame">
+              <img src="assets/images/business-me.svg" alt="Cesar working on a business project" />
+            </div>
+            <div class="gallery-item-body">
+              <span class="badge">Image</span>
+              <h3>Business Projects</h3>
+              <p>One of the case studies I worked on this semester.</p>
+            </div>
+          </a>
+          <a class="gallery-item" href="assets/images/group.svg" target="_blank" rel="noopener">
+            <div class="media-frame">
+              <img src="assets/images/group.svg" alt="Cesar with friends and family" />
+            </div>
+            <div class="gallery-item-body">
+              <span class="badge">Image</span>
+              <h3>Friends &amp; Family</h3>
+              <p>The people who keep me motivated and grounded.</p>
+            </div>
+          </a>
+        </div>
+        <p style="margin-top: 1.2rem;">
+          Want to see more? Visit the <a href="media.html">Media page</a> for my
+          full gallery.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact section: social links, email, and form -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-wrapper">
+          <div>
+            <h3>Let's Connect</h3>
+            <p style="color: #94a3b8;">
+              Have a comment, question, partnership idea, or opportunity for me?
+              Send me a message and I will get back to you as soon as possible.
+            </p>
+            <ul class="contact-links">
+              <li>
+                <a href="mailto:cesar.espitia@example.com">
+                  <span class="icon">📧</span> Email Me
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Cesar1289" target="_blank" rel="noopener">
+                  <span class="icon">💻</span> GitHub
+                </a>
+              </li>
+              <!-- TODO: Add more social links here, for example:
+              <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener"><span class="icon">💼</span> LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener"><span class="icon">📸</span> Instagram</a></li>
+              -->
+            </ul>
+          </div>
+
+          <div class="form-card">
+            <h3>Send Me a Message</h3>
+            <form id="contact-form" novalidate>
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="firstName">First Name <span class="req">*</span></label>
+                  <input type="text" id="firstName" name="firstName" required />
+                </div>
+                <div class="form-field">
+                  <label for="lastName">Last Name <span class="req">*</span></label>
+                  <input type="text" id="lastName" name="lastName" required />
+                </div>
+                <div class="form-field full">
+                  <label for="email">Email <span class="req">*</span></label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-field full">
+                  <span style="font-weight: 600; font-size: 0.92rem;">Reason for Contact <span class="req" style="color: #f87171;">*</span></span>
+                  <div class="reason-options" role="radiogroup" aria-label="Reason for contact">
+                    <label><input type="radio" name="reason" value="Comment" /> Comment</label>
+                    <label><input type="radio" name="reason" value="Question" /> Question</label>
+                    <label><input type="radio" name="reason" value="Partnership" /> Partnership</label>
+                    <label><input type="radio" name="reason" value="Opportunity" /> Opportunity</label>
+                    <label><input type="radio" name="reason" value="Other" /> Other</label>
+                  </div>
+                </div>
+                <div class="form-field full">
+                  <label for="message">Message <span class="req">*</span></label>
+                  <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+                </div>
+                <div class="form-field full">
+                  <button type="submit" class="btn-submit">Send Message</button>
+                </div>
+              </div>
+              <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="footer-year">2026</span> Cesar Espitia. All rights reserved.</p>
+    <p class="footer-links">
+      <a href="index.html">Home</a> ·
+      <a href="media.html">Media</a> ·
+      <a href="future.html">Future</a> ·
+      <a href="hobbies.html">Hobbies</a> ·
+      <a href="travel.html">Travel</a> ·
+      <a href="admin.html">Admin</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
